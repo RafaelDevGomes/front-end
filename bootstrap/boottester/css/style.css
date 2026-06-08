@@ -1,0 +1,19 @@
+.navbar-brand img{
+    width: 50px;
+}
+img{
+    width: 50px;
+}
+.card-img-tamanho{
+    width: 60px;
+}
+.nav-link{
+    color: white
+}
+.card-img-top{
+    width: 300px;
+    height: 100%;
+}
+nav{
+    background-color: #b92bdd;
+}

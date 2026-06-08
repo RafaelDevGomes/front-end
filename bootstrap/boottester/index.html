@@ -9,87 +9,92 @@
   </head>
   <body>
     <div class="container-fluid">
+      <!-- primeira linha - aqui é a navbar -->
       <div class="row">
         <div class="col-12">
-          <!-- aqui é a navbar -->
-                    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <nav class="navbar navbar-expand-lg" class="navbar bg-dark border-bottom border-body" data-bs-theme="">
+           <!-- Navbar content -->
             <div class="container-fluid">
-              <a class="navbar-brand" href="#"><img src="" alt=""></a>
+              <a class="navbar-brand" href="#">
+                <img id= "logoboots" src="img/bootstrap-logo-black.svg" alt="">
+              </a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link" aria-current="page" href="#" alt="">Docs</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Quem Somos</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Projetos
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Projeto Cordel</a></li>
-                      <li><a class="dropdown-item" href="#">Projeto Iframe</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Projeto Rei-das-Motos</a></li>
-                    </ul>
+                    <a class="nav-link" href="#">Examples</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                    <a class="nav-link" href="#">Icons</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Blog</a>
                   </li>
                 </ul>
                 <form class="d-flex" role="search">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-                  <button class="btn btn-outline-success" type="submit">Search</button>
+                  <input class="form-control me-2" type="search" placeholder="Digite sua busca..." aria-label="Search"/>
+                  <button class="btn btn-outline-success" type="submit">Buscar</button>
                 </form>
+                <nav>
+                  <ul>
+                    <li>
+                      icone do github
+                    </li>
+                    <li>
+                      icone do twitter
+                    </li>
+                  </ul>
+                </nav>
               </div>
             </div>
           </nav>
         </div>
       </div> 
-      <div class="row"> <!-- aqui é o botao amarelo warming -->
+      <!-- segunda linha - aqui é o botao amarelo warming -->
+      <div class="row"> 
         <div class="col-12">
-          <button type="button" class="btn btn-warning">Warning</button>
+          <button type="button" class="btn btn-warning">Get security updates for Bootstrap 3 & 4</button>
       </div> 
-      <!-- aqui é o card grande -->
-      <div class="row">
+      <!-- terceira linha - aqui é o card grande -->
+      <section class="row">
         <div class="col-12">
-           <div class="card" style="width: 18rem;">
-              <img src="..." class="card-img-top" alt="...">
+           <div class="card">
+              <img src="img/bootstrap-logo-black.svg" class="card-img-top" alt="...">
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <h5 class="card-title">Build fast, responsive sites with Boostrap</h5>
+                <p class="card-text">Powerful, extensible, and feature-packed frontend toolkit. Build and customize with Sass, utilize prebuilt grid system and components, and bring projects to life with powerful JavaScript plugins. </p>
+                
+                <a href="#" class="btn btn-primary">Read the docs</a>
               </div>
             </div>
         </div>
-      </div> 
-      <!-- aqui é os cards pequenos -->
-      <div class="row">
-        <div class="col-6">
-          <div class="card" style="width: 18rem;">
-              <img src="..." class="card-img-top" alt="...">
+      </section> 
+      <!-- quarta linha - aqui é os cards pequenos -->
+      <section class="row">
+        <article class="col-12 col-md-6">
+          <div class="card">
+              <img src="img/B.png" class="card-img-tamanho" alt="...">
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <h5 class="card-title">Install via package manager</h5>
+                <p class="card-text">Install Bootstrap’s source Sass and JavaScript files via npm, RubyGems, Composer, or Meteor. Package-managed installs don’t include documentation or our full build scripts. You can also use any demo from our Examples repo to quickly jumpstart Bootstrap projects. </p>
               </div>
             </div>
-        </div>
-        <div class="col-6">
-          <div class="card" style="width: 18rem;">
-              <img src="..." class="card-img-top" alt="...">
+        </article>
+        <article class="col-12 col-md-6">
+          <div class="card">
+              <img src="img/A.png" class="card-img-tamanho"  alt="...">
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <h5 class="card-title">Include via CDN</h5>
+                <p class="card-text">When you only need to include Bootstrap’s compiled CSS or JS, you can use jsDelivr. See it in action with our simple quick start, or browse the examples to jumpstart your next project. You can also choose to include Popper and our JS separately. </p>
               </div>
             </div>
-        </div>
-      </div>
+          </article>
+      </section>
       
     </div>  
 
