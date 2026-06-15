@@ -14,6 +14,7 @@
         <div class="col-12">
           <nav class="navbar navbar-expand-lg" class="navbar bg-dark border-bottom border-body" data-bs-theme="">
            <!-- Navbar content -->
+
             <div class="container-fluid">
               <a class="navbar-brand" href="#">
                 <img id= "logoboots" src="img/bootstrap-logo-black.svg" alt="">
@@ -38,10 +39,10 @@
                 </ul>
                 <form class="d-flex" role="search">
                   <input class="form-control me-2" type="search" placeholder="Digite sua busca..." aria-label="Search"/>
-                  <button class="btn btn-outline-success" type="submit">Buscar</button>
+                  <button class="btn botao-roxo" type="submit">Buscar</button>
                 </form>
                 <nav>
-                  <ul>
+                  <ul class="ladinho">
                     <li>
                       icone do github
                     </li>
@@ -56,20 +57,27 @@
         </div>
       </div> 
       <!-- segunda linha - aqui é o botao amarelo warming -->
-      <div class="row"> 
-        <div class="col-12">
-          <button type="button" class="btn btn-warning">Get security updates for Bootstrap 3 & 4</button>
+      <div class="row py-4"> 
+        <div class="col-12 d-flex justify-content-center">
+          <button type="button" class="btn btn-warning borda-bola">Get security updates for Bootstrap 3 & 4</button>
       </div> 
       <!-- terceira linha - aqui é o card grande -->
-      <section class="row">
+      <section class="row py-4">
         <div class="col-12">
            <div class="card">
+            <!-- isso daqui é a imagem do card central -->
               <img src="img/bootstrap-logo-black.svg" class="card-img-top" alt="...">
               <div class="card-body">
-                <h5 class="card-title">Build fast, responsive sites with Boostrap</h5>
-                <p class="card-text">Powerful, extensible, and feature-packed frontend toolkit. Build and customize with Sass, utilize prebuilt grid system and components, and bring projects to life with powerful JavaScript plugins. </p>
                 
-                <a href="#" class="btn btn-primary">Read the docs</a>
+                <h5 class="card-title h5grande">
+                  <div class="d-flex justify-content-center">Build fast, responsive sites with Boostrap</h5>
+                <p class="card-text d-flex justify-content-center">Powerful, extensible, and feature-packed frontend toolkit. Build and customize with Sass, utilize prebuilt grid system and components, and bring projects to life with powerful JavaScript plugins. </p>
+                <div class="d-flex justify-content-center">
+                <a href="#" class="btn botao-roxo">Botão dos codigos</a>
+                <a href="#" class="btn botao-roxo ms-2">Read the docs</a>
+                </div>
+                </div>
+                </div>
               </div>
             </div>
         </div>
@@ -87,8 +95,8 @@
         </article>
         <article class="col-12 col-md-6">
           <div class="card">
-              <img src="img/A.png" class="card-img-tamanho"  alt="...">
-              <div class="card-body">
+              <img src="img/A.png" class="card-img-tamanho cardmenor"  alt="...">
+              <div class="card-body cardmenor">
                 <h5 class="card-title">Include via CDN</h5>
                 <p class="card-text">When you only need to include Bootstrap’s compiled CSS or JS, you can use jsDelivr. See it in action with our simple quick start, or browse the examples to jumpstart your next project. You can also choose to include Popper and our JS separately. </p>
               </div>
