@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = 1;
+        let b = 2;
+        let c = "c";
+
+        alert('b>=a E a==c -> '+ (b>=a&&a==c)) //true
+        // 2. Operação OR (OU)
+        alert('b>=a OU a==c -> ' + (b >= a || a == c)); // true
+
+        // 3. Operação NOT (NÃO) - Inverte o resultado da expressão inteira
+        alert('NÃO (b>=a E a==c) -> ' + !(b >= a && a == c)); // false
+
+        // 4. Operação XOR (OU Exclusivo) 
+        // No JavaScript, usamos o operador bitwise '^' ou comparamos se os valores são diferentes (!=) 
+        alert('b>=a XOR a==c -> ' + ((b >= a) !== (a == c))); // false
+    </script>
+</body>
+</html>
