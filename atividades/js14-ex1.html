@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício</title>
+</head>
+<body>
+</body>
+<script>
+        let multa;
+        let velocidade = prompt("Entre com a velocidade: ");
+        const limite_velocidade = 80;
+        let perdeDireitoDirigir;
+
+        if (velocidade <= limite_velocidade) {
+            multa = "sem multa";
+            perdeDireitoDirigir = false;
+        } else if (velocidade <= limite_velocidade * 1.2) {
+            multa = "leve";
+            perdeDireitoDirigir = false;
+        } else {
+            multa = "grave";
+            perdeDireitoDirigir = true;
+        }
+        alert(`Sua velocidade: ${velocidade}, tu vai receber uma multa: ${multa} `);
+        (perdeDireitoDirigir) ? alert("Você perdeu direito de dirigir!") : alert("Você não perdeu direito de dirigir!")
+    </script>
+</html>

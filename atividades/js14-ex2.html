@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2</title>
+</head>
+<body>
+    <script>
+       let salario = prompt('Digite o seu salário: ');
+       const TETO_INSS = 8475.55;
+       let desconto; 
+       
+       if (salario <= TETO_INSS * 1.11) {
+
+        desconto = true
+        alert(`O desconto aplicado é de  ${salario / 1.11} `)
+
+
+       } else if(salario > TETO_INSS * 1.11) { 
+
+        desconto = false
+        alert(`O desconto no teto do INSS aplicado é de  ${salario / 1.11} `)
+
+       } else {
+        
+        alert('Você errou em algo, recarregue a pagina!')
+
+       }
+
+       (desconto) ? alert('Você é um contribuidor') : alert('Você é um gerente')
+    </script>
+</body>
+</html>
