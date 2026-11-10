@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <title>Treino de Lógica em JavaScript - POO</title>
+</head>
+<body>
+
+    <h1 style="text-align: center; font-family: Arial;">Treinamento de Lógica em JavaScript</h1>
+    <p style="text-align: center; font-family: Arial;">Abra o console do navegador (F12) ou acompanhe os alertas para testar os exercícios.</p>
+
+    <script>
+        // ==========================================
+        // EXERCÍCIO 1: O Sistema Bancário (O do seu professor)
+        // ==========================================
+        class ContaBancaria {
+            constructor() {
+                this.agencia = "";
+                this.numero = "";
+                this.saldo = 0;
+            }
+
+            depositar(valor) {
+                if (valor > 0) {
+                    this.saldo += valor;
+                    alert(`Depósito de R$ ${valor} realizado! Saldo atual: R$ ${this.saldo}`);
+                } else {
+                    alert("Valor de depósito inválido!");
+                }
+            }
+
+            sacar(valor) {
+                if (valor > 0 && valor <= this.saldo) {
+                    this.saldo -= valor;
+                    return true; // Deu certo
+                }
+                return false; // Saldo insuficiente
+            }
+        }
+
+        function rodarExercicio1() {
+            alert("--- EXERCÍCIO 1: Conta Bancária ---");
+            const minhaConta = new ContaBancaria();
+            let opcao;
+
+            do {
+                opcao = Number(prompt(
+                    "BANCO SIMPLES\n" +
+                    "1 - Cadastrar\n" +
+                    "2 - Depositar\n" +
+                    "3 - Sacar\n" +
+                    "4 - Ver Saldo\n" +
+                    "5 - Ir para próximo exercício"
+                ));
+
+                switch (opcao) {
+                    case 1:
+                        minhaConta.agencia = prompt("Informe a agência:");
+                        minhaConta.numero = prompt("Informe o número da conta:");
+                        alert("Conta cadastrada!");
+                        break;
+                    case 2:
+                        let dep = Number(prompt("Valor para depósito:"));
+                        minhaConta.depositar(dep);
+                        break;
+                    case 3:
+                        let sac = Number(prompt("Valor para saque:"));
+                        if (minhaConta.sacar(sac)) {
+                            alert("Saque realizado com sucesso!");
+                        } else {
+                            alert("Saldo insuficiente!");
+                        }
+                        break;
+                    case 4:
+                        alert(`Agência: ${minhaConta.agencia} | Conta: ${minhaConta.numero} | Saldo: R$ ${minhaConta.saldo}`);
+                        break;
+                    case 5:
+                        alert("Encerrando Exercício 1...");
+                        break;
+                    default:
+                        alert("Opção inválida.");
+                }
+            } while (opcao !== 5);
+        }
+
+
+        // ==========================================
+        // EXERCÍCIO 2: Cadastro e Consulta de Aluno
+        // ==========================================
+        class Aluno {
+            constructor() {
+                this.nome = "";
+                this.nota1 = 0;
+                this.nota2 = 0;
+            }
+
+            calcularMedia() {
+                return (this.nota1 + this.nota2) / 2;
+            }
+        }
+
+        function rodarExercicio2() {
+            alert("--- EXERCÍCIO 2: Controle de Alunos ---");
+            const meuAluno = new Aluno();
+            let opcao;
+
+            do {
+                opcao = Number(prompt(
+                    "ESCOLA JS\n" +
+                    "1 - Cadastrar Aluno e Notas\n" +
+                    "2 - Ver Média e Situação\n" +
+                    "3 - Ir para próximo exercício"
+                ));
+
+                switch (opcao) {
+                    case 1:
+                        meuAluno.nome = prompt("Nome do aluno:");
+                        meuAluno.nota1 = Number(prompt("Digite a 1ª nota:"));
+                        meuAluno.nota2 = Number(prompt("Digite a 2ª nota:"));
+                        alert("Notas cadastradas!");
+                        break;
+                    case 2:
+                        let media = meuAluno.calcularMedia();
+                        let situacao = media >= 6 ? "Aprovado(a)!" : "Reprovado(a).";
+                        alert(`Aluno: ${meuAluno.nome}\nMédia: ${media.toFixed(1)}\nSituação: ${situacao}`);
+                        break;
+                    case 3:
+                        alert("Encerrando Exercício 2...");
+                        break;
+                    default:
+                        alert("Opção inválida.");
+                }
+            } while (opcao !== 3);
+        }
+
+
+        // ==========================================
+        // EXERCÍCIO 3: Carrinho de Compras Simples
+        // ==========================================
+        class Carrinho {
+            constructor() {
+                this.total = 0;
+                this.quantidadeItens = 0;
+            }
+
+            adicionarItem(preco) {
+                if (preco > 0) {
+                    this.total += preco;
+                    this.quantidadeItens++;
+                    alert(`Item adicionado! Total de itens: ${this.quantidadeItens}`);
+                } else {
+                    alert("Preço inválido!");
+                }
+            }
+        }
+
+        function rodarExercicio3() {
+            alert("--- EXERCÍCIO 3: Carrinho de Compras ---");
+            const meuCarrinho = new Carrinho();
+            let opcao;
+
+            do {
+                opcao = Number(prompt(
+                    "LOJA VIRTUAL\n" +
+                    "1 - Adicionar produto (informar preço)\n" +
+                    "2 - Ver valor total da compra\n" +
+                    "3 - Finalizar TUDO"
+                ));
+
+                switch (opcao) {
+                    case 1:
+                        let precoProduto = Number(prompt("Digite o preço do produto:"));
+                        meuCarrinho.adicionarItem(precoProduto);
+                        break;
+                    case 2:
+                        alert(`Itens no carrinho: ${meuCarrinho.quantidadeItens}\nTotal a pagar: R$ ${meuCarrinho.total.toFixed(2)}`);
+                        break;
+                    case 3:
+                        alert("Compra finalizada! Obrigado por treinar.");
+                        break;
+                    default:
+                        alert("Opção inválida.");
+                }
+            } while (opcao !== 3);
+        }
+
+
+        // ==========================================
+        // FLUXO DE EXECUÇÃO DOS EXERCÍCIOS
+        // ==========================================
+        alert("Bem-vindo ao treino! Vamos rodar 3 exercícios em sequência para você entender o padrão.");
+        rodarExercicio1();
+        rodarExercicio2();
+        rodarExercicio3();
+        alert("Parabéns! Você concluiu a bateria de testes.");
+    </script>
+
+</body>
+</html>
